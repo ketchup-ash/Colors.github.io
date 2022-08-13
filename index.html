@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Test 1</title>
+
+    <style>
+        body {
+            background-color: #333333;
+        }
+
+        h1 {
+            color: #cccccc;
+            font-size: 200px;
+            font-family: 'DynaPuff', cursive;
+        }
+
+        button {
+            position: absolute;
+            top: 70%;
+            left: 70%;
+            font-size: 40px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 20px 50px 20px 50px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 9px #999999;
+        }
+
+        button:hover {
+            background-color: #cccccc;
+        }
+
+        button:active {
+            box-shadow: 0 5px #666666;
+            transform: translateY(4px);
+        }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1 id="title">#333333</h1>
+    <button id="btn" type="button" onclick="Change()">Change</button>
+
+    <script>
+        let title = document.getElementById("title");
+        let colors = ["#EB5353", "#AB46D2", "#36AE7C", "#187498", "#4D96FF"];
+        let i = 0;
+
+        function Change() {
+            title.innerHTML = colors[i];
+            document.body.style.backgroundColor = colors[i];
+            if(i < colors.length - 1) {
+                i++;
+            }
+            else {
+                i = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>
